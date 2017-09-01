@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>558 scouting database</title>
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css">
+
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/AddData.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li><a href="/logout">logout</a></li>
+            <li class="active"><a href="/showEnterData">Enter Data</a></li>
+            <li><a href="/showInfo">Database</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">558 scouting database</h3>
+      </div>
+      <section>
+        <form class="form-horizontal">
+          <fieldset>
+            <legend>Add data</legend>
+            <div class="form-group">
+              <label for="txtMatch" class="col-md-4 control-label">Match number</label>
+              <div class="col-md-6">
+                <input id="txtMatch" name="inputMatch" type="text" placeholder="number: 100 or 55" class="form-control input-md" required="testing">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtTeam" class="col-md-4 control-label">Team name</label>
+              <div class="col-md-5">
+                <input id="txtTeam" type="text" name="inputTeam" placeholder="558 or 195" class="form-control input-md" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtgearIntake" class="col-md-4 control-label">Type of Gear Intake</label>
+              <div class="col-md-6">
+                <select name="SelectGearIntake" class="form-control" required>
+                  <option value="">Select a type</option>
+                  <option value="hybrid">Hybrid</option>
+                  <option value="passive">Passive</option>
+                  <option value"None">None</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtgearPlacement" class="col-md-4 control-label">Type of Gear Placement</label>
+              <div class="col-md-4">
+                <select name="selectGearPlace" class="form-control">
+                  <option value="">Select a Type</option>
+                  <option value="active">Active</option>
+                  <option value="passive">Passive</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtGearsPlaced" class="col-md-4 control-label">Gears placed</label>
+              <div class="col-md-4">
+                <input id="txtGears" type="text" name="txtGears" class="form-control input-md" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtkpa" class="col-md-4 control-label">KPA</label>
+              <div class="col-md-4">
+                <input id="txtKpa" type="text" name="inputKpa" class="form-control input-md" placeholder="Numbers only" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="selectDrivetrain" class="col-md-4 control-label">Type of DriveTrain</label>
+              <div class="col-md-4">
+                <select name="selectDriveTrain" class="form-control" required>
+                  <option value="">Select a drivetrain</option>
+                  <option value="Tank">Tank</option>
+                  <option value="Mecanum">Mecanum</option>
+                  <option value="Swirve">Swirve</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="selectClimb" class="col-md-4 control-label">Did they climb?</label>
+              <div class="col-md-4">
+                <select name="selectClimb" class="form-control" required>
+                  <option value="">Select an option</option>
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="txtPost" class="col-md-4 control-label">Comments</label>
+              <div class="col-md-5">
+                <textarea name="inputComments" class="form-control" id="txtPost"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <button id="btnData" type="button" class="btn btn-lg btn-primary btn-block">Publish</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <footer class="footer">
+        <p>&copy; FRC Team 558</p>
+      </footer>
+    </div>
+  </body>
+</html>
